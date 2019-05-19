@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/bigbarkus/FriendFinder/issues"
   },
-  "homepage": "https://github.com/bigbarkus/FriendFinder#readme"
+  "homepage": "https://github.com/bigbarkus/FriendFinder#readme",
+  "dependencies": {
+    "express": "^4.17.0"
+  }
 }
