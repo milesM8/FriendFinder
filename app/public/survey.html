@@ -142,20 +142,7 @@
 			</div>
 			<div id="results-modal" class="modal fade" role="dialog">
 				<div class="modal-dialog">
-					<!-- Modal content-->
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal">×</button>
-							<h2 class="modal-title"><strong>Best Match</strong></h2>
-						</div>
-						<div class="modal-body">
-							<h2 id="match-name"></h2>
-							<img id="match-img" src="https://via.placeholder.com/150" alt="" />
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						</div>
-					</div>
+					<div class="modal-content"></div>
 				</div>
 			</div>
 			<br />
@@ -194,10 +181,7 @@
 					]
 				};
 				$.post("/api/friends", friendProfile, function(data) {
-					console.log("it worked");
-					// $("#match-name").text(data.name);
-					// $("#match-img").attr("src", data.photo);
-					// $("#results-modal").modal("toggle");
+					// target modal reveal with match code here
 				});
 			});
 		</script>
