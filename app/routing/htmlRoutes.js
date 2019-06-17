@@ -1,12 +1,19 @@
-var express = require("express");
-var router = express.Router();
+var path = require("path");
 
-router.get("/", function(req, res) {
-	res.sendFile("/Users/milesmoscara/bootcamp/FriendFinder/app/public/home.html");
-});
+module.exports = function (app) {
 
-router.get("/survey", function(req, res) {
-	res.sendFile("/Users/milesmoscara/bootcamp/FriendFinder/app/public/survey.html");
-});
+    // Respond with the html file for home
+    app.get("/", function (req, res) {
+        res.sendFile(path.join(__dirname, "../public/home.html"));
+    });
 
-module.exports = router;
+    //Respond with the html for user
+    app.get("/user", function (req, res) {
+        res.sendFile(path.join(__dirname, "../public/user.html"));
+	});
+	
+	app.get("*", function(req, res) {
+		res.sendFile(path.join(__dirname, "../public/home.html"));
+	  });
+	
+}
